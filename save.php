@@ -10,7 +10,10 @@ if(isset($_POST['save'])) {
     $Name = $_POST['Name'];
     $Surname = $_POST['Surname'];
     $email = $_POST['email'];
+    $userid = $_POST['userid'];
+    $pass = $_POST['pass'];
     $conn = mysqli_connect($host,$username,$password,$databasename) or die(mysql_error());
-    $sql = "Insert into list (cust_id, Name, Surname, email) VALUES ('$ID', '$Name', '$Surname', '$email')";
-    mysqli_query($conn);
+    $sql = "Insert into list (cust_id, Name, Surname, email, userid, pass) VALUES ('$ID', '$Name', '$Surname', '$email', '$userid', '$pass')";
+    mysqli_query($conn,$sql);
+
 }
