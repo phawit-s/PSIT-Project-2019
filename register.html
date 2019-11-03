@@ -7,16 +7,43 @@
     <link rel="stylesheet" href="CSS/style_for_register.css">
 </head>
 <body>
-    <form action="">
+    <form action="save.php" method="GET">
         <div class="hero">
-            <div class="form-box">
-                <h1>Sign Up Now</h1>
-                <input type="text" class="input-field" placeholder="Username" required>
-                <input type="email" class="input-field" placeholder="Email" required>
-                <input type="password" class="input-field" placeholder="Password" required>
-                <button type="botton" class="sing-up-botton">Sign up</button>
-                <p>Already have an account? <a href="#">Sign in</a></p>
-            </div>
+            <table class="form-box">
+                <tr>
+                    <th colspan="2">Sign Up Now</th>
+                </tr>
+                <tr>
+                    <td>Student ID</td><td><input type="userid" class="input-field" name="userid"></td>
+                </tr>
+                <tr>
+                    <td>Name</td><td><input type="Name" class="input-field" name="Name"></td>
+                </tr>
+                <tr>
+                    <td>Surname</td><td><input type="Surname" class="input-field" name="Surname"></td>
+                </tr>
+                <tr>
+                    <td>Email</td><td><input type="email" class="input-field" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Username</td><td><input type="userwname" class="input-field" name="userwname"></td>
+                </tr>
+                <tr>
+                    <td>Enter Password</td><td><input type="pass" class="input-field" name="renterPass"></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td><td><input type="pass" class="input-field" name="rconfirmPass"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td><td>Male<input type="radio" name="gender" value="Male">Female<input type="radio" name="gender" value="Female"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="reset" class="button1" value="Clean">&nbsp <input type="submit" class="button2" name="save" value="Save"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><p class="to-login">Already have an account? <a href="#">Sign in</a></p></td>
+                </tr>
+            </table>
         </div>
     </form>
 </body>
