@@ -15,37 +15,57 @@
 
 .form-box{
     border-radius: 20px;
-    height: 480px;
-    width: 380px;
+    height: 500px;
+    width: 400px;
     position: relative;
-    margin: 6% auto;
+    margin: 7% auto;
     background: seashell;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
-.form-box h1{
+.form-box th{
     color: #990033;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
 }
 
 .input-field{
     border-radius: 20px;
     border: 1px solid lightcoral;
-    padding: 15px;
-    margin: 10px 0;
-    width: 90%;
+    padding: 5px;
+    margin: 0px 35px 0px 0px;
+    width: 80%;
     outline: none;
 }
-.sing-up-botton{
+
+.gender-box{
+    margin: 10px 0px 0px 0px;
+}
+
+.button1{
     border-radius: 20px;
-    width: 90%;
-    padding: 10px;
+    width: 60%;
+    padding: 5px;
+    color: wheat;
+    background-color: grey;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 10px 0px 0px 0px;
+}
+
+
+.button2{
+    border-radius: 20px;
+    width: 60%;
+    padding: 5px;
     color: #000000;
     background-color: sandybrown;
     font-size: 15px;
     border: none;
     outline: none;
     cursor: pointer;
-    margin: 120px 0px 10px 0px;
+    margin: 10px 0px 0px 0px;
 }
