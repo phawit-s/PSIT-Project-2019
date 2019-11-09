@@ -10,10 +10,10 @@
     $userid = $_GET['userid'];
     $Name = $_GET['Name'];
     $Surname = $_GET['Surname'];
-	$email = $_GET['email'];
+    $email = $_GET['email'];
     $gender = $_GET['gender'];
     $userwname = $_GET['userwname'];
-	$pass1 = $_GET['renterPass'];
+    $pass1 = $_GET['renterPass'];
     $pass2 = $_GET['rconfirmPass'];
     }
 
