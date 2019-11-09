@@ -34,7 +34,10 @@
 		}
 	}else
 	{
-		echo "รหัสไม่ถูกต้อง";
+		echo "<script>
+    		alert('Wrong password');
+    		window.location.href='https://projectpsit2019.000webhostapp.com/';
+    		</script>";
 	}
 	
 	mysqli_close($con);
