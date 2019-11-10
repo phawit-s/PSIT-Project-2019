@@ -47,13 +47,13 @@
     border-radius: 20px;
     width: 60%;
     padding: 5px;
-    color: wheat;
+    color: orange;
     background-color: grey;
     font-size: 15px;
     border: none;
     outline: none;
     cursor: pointer;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 0px 5px;
 }
 
 
