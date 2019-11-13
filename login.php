@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php
     include_once('connect.php');
 
@@ -5,14 +6,14 @@
         $username = $_POST['username'];
         $password = $conn->real_escape_string($_POST['password']);
         
-        $sql = "SELECT * FROM `register` WHERE `username` = '".$username."' AND `pass` = '".$password."'";
+        $sql = "SELECT * FROM `register` WHERE `userwname` = '".$username."' AND `pass` = '".$password."'";
         $result = $conn->query($sql);
 
         if($result->num_rows >0){
-            echo "<script>
-            alert('Successful');
-            window.location.href='index.html';
-            </script>";
+            $row = $result->fetch_assoc();
+            $_SESSION['Name'] = $row['Name'];
+            $_SESSION['Surname'] = $row['Surname'];
+            header('location:index.php');
         }
         else{
             echo "<script>
