@@ -1,7 +1,13 @@
+<?php session_start();
+    if(isset($_SESSION['id'])){
+        header("location: login.html");
+    }
+    else
+    {
+?>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Home Page</title>
   <link rel="stylesheet" type="text/css" href="CSS/style_for_homepage.css">
 </head>
 <body>
@@ -11,9 +17,11 @@
     </div>
     <div class="menubar">
         <ul>
+        <?=$_SESSION['id'];?>!<a href="logout.php">Logout</a>
           <li><a href="">example</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="#">WELCOME</a></li>
           <li><a href="contact page.html">Contact Us</a></li>
+        
         </ul>
     </div>
     <div class="textbox1">
@@ -37,3 +45,6 @@
     </div>
 </body>
 </html>
+<?php
+}
+?>
