@@ -1,10 +1,4 @@
-<?php session_start();
-    if(isset($_SESSION['id'])){
-        header("location: login.html");
-    }
-    else
-    {
-?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,11 +11,14 @@
     </div>
     <div class="menubar">
         <ul>
-        <?=$_SESSION['id'];?>!<a href="logout.php">Logout</a>
-          <li><a href="">example</a></li>
-          <li><a href="#">WELCOME</a></li>
+        <?php if(isset($_SESSION['Name'])) { ?>
+          <li><a href="logout.php">logout</a></li>
+          <li><a href="#">WELCOME <?php echo $_SESSION['Name'] ?></a></li>
           <li><a href="contact page.html">Contact Us</a></li>
-        
+        <?php }else { ?>
+                <li><a herf="index.php">login</a></li>
+                <li><a herf="register.html">register</a></li>
+        <?php } ?>
         </ul>
     </div>
     <div class="textbox1">
@@ -45,6 +42,3 @@
     </div>
 </body>
 </html>
-<?php
-}
-?>
