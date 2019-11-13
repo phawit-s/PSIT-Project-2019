@@ -13,7 +13,7 @@
         <ul>
         <?php if(isset($_SESSION['Name'])) { ?>
           <li><a href="logout.php">logout</a></li>
-          <li><a href="#">WELCOME <?php echo $_SESSION['Name'] ?></a></li>
+          <li><a href="#">WELCOME <?php echo $_SESSION['Name']; echo $_SESSION['Surname'];?></a></li>
           <li><a href="contact page.html">Contact Us</a></li>
         <?php }else { ?>
                 <li><a herf="index.php">login</a></li>
