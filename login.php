@@ -9,7 +9,7 @@
         $sql = "SELECT * FROM `register` WHERE `userwname` = '".$username."' AND `pass` = '".$password."'";
         $result = $conn->query($sql);
 
-        if($result->num_rows >0){
+        if($result->num_rows > 0){
             $row = $result->fetch_assoc();
             $_SESSION['Name'] = $row['Name'];
             $_SESSION['Surname'] = $row['Surname'];
