@@ -16,8 +16,8 @@
           <li><a href="#">WELCOME <?php echo $_SESSION['Name']; echo $_SESSION['Surname'];?></a></li>
           <li><a href="contact page.html">Contact Us</a></li>
         <?php }else { ?>
-                <li><a herf="index.php">login</a></li>
-                <li><a herf="register.html">register</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="register.html">register</a></li>
         <?php } ?>
         </ul>
     </div>
