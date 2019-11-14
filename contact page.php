@@ -1,12 +1,18 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		contact us
-	</title>
+
 	<link rel="stylesheet" type="text/css" href="CSS/style for contact page.css">
 </head>
 <body>
+    <?php if(isset($_SESSION['Name'])) { ?>
+    		<a href="#">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
+    		<a href="logout.php">logout</a>
+    <?php }else { ?>
+                <a href="login.html">login</a>
+                <a href="register.html">register</a>
+    <?php } ?>
 	<h1 style="text-align: center;">Contact Page</h1>
 	<div class="card">
 		<img src="https://cdn.pixabay.com/photo/2017/03/09/12/32/pirate-2129571_1280.jpg" style="width: 100%">
