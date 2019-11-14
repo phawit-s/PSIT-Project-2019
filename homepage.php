@@ -13,7 +13,7 @@
         <ul>
         <?php if(isset($_SESSION['Name'])) { ?>
           <li><a href="logout.php">logout</a></li>
-          <li><a href="#">WELCOME <?php echo $_SESSION['Name']; echo $_SESSION['Surname'];?></a></li>
+          <li><a href="#">WELCOME <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a></li>
           <li><a href="contact page.html">Contact Us</a></li>
         <?php }else { ?>
                 <li><a href="login.html">login</a></li>
@@ -31,13 +31,23 @@
           <b id="txt2">
             
           </b>
+          <?php if(isset($_SESSION['Name'])) { ?>
           <b id="txt3">
+            <p id="already">
+            fuck you
+            </p>
+            <p id="already2">!!!Please Login !!!</p><br><br>
+            <p><a href="login.html" id="login_in_home">Go To Login Page Nowww</a></p>
+          </b>
+          <?php }else { ?>
+            <b id="txt3">
             <p id="already">
             Already Have An Account ???
             </p>
             <p id="already2">!!!Please Login !!!</p><br><br>
             <p><a href="login.html" id="login_in_home">Go To Login Page Nowww</a></p>
           </b>
+          <?php } ?>
         </div>
     </div>
 </body>
