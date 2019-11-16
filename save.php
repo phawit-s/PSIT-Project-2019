@@ -16,10 +16,6 @@
     $userwname = $_POST['userwname'];
 	$pass1 = $_POST['renterPass'];
 	$pass2 = $_POST['rconfirmPass'];
-	echo "Name" .$_FILES('filupload')['name'].'<br>';
-	echo "des" .$_FILES('filupload')['tmp_name'].'<br>';
-	echo "size" .$_FILES('filupload')['name'].'<br>';
-	echo "Type" .$_FILES('filupload')['type'].'<br>';
 
 	$temp = explode('.', $_FILES('filupload')['name']);
 	$new =  round(microtime(true)). '.'. end($temp);
