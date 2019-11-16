@@ -15,7 +15,9 @@
     $gender = $_POST['gender'];
     $userwname = $_POST['userwname'];
 	$pass1 = $_POST['renterPass'];
-    $pass2 = $_POST['rconfirmPass'];
+	$pass2 = $_POST['rconfirmPass'];
+	$image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+
     }
   
 	if(!$con)
@@ -26,7 +28,7 @@
 	if($pass1 == $pass2)
 	{
         // insert data from register.html into databases
-		$sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`) VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender');";
+		$sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`, `picture`) VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender', '$image');";
 		if(mysqli_query($con,$sql))
 		{
 			echo "<script>
