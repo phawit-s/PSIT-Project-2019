@@ -1,23 +1,29 @@
 <?PHP
-    // Database Connection code
-    $host = 'localhost';
-    $username = 'id11387127_projectpsit2019';
-    $password = 'Imnayeon1995';
-    $databasename = 'id11387127_psit';
+	// Database Connection code
+	$host = 'localhost';
+	$username = 'id11387127_projectpsit2019';
+	$password = 'Imnayeon1995';
+	$databasename = 'id11387127_psit';
     $con = mysqli_connect($host,$username,$password,$databasename);
-    if(isset($_GET['save'])) {
+    if(isset($_POST['save'])) {
     
     // GET information from register.html
-    $userid = $_GET['userid'];
-    $Name = $_GET['Name'];
-    $Surname = $_GET['Surname'];
-    $email = $_GET['email'];
-    $gender = $_GET['gender'];
-    $userwname = $_GET['userwname'];
-    $pass1 = $_GET['renterPass'];
-    $pass2 = $_GET['rconfirmPass'];
+    $userid = $_POST['userid'];
+    $Name = $_POST['Name'];
+    $Surname = $_POST['Surname'];
+	$email = $_POST['email'];
+    $gender = $_POST['gender'];
+    $userwname = $_POST['userwname'];
+	$pass1 = $_POST['renterPass'];
+	$pass2 = $_POST['rconfirmPass'];
+	echo "Name" .$_FILES('filupload')['name'].'<br>';
+	echo "des" .$_FILES('filupload')['tmp_name'].'<br>';
+	echo "size" .$_FILES('filupload')['name'].'<br>';
+	echo "Type" .$_FILES('filupload')['name'].'<br>';
+	
+	move_uploaded_file($_FILES['filupload']['tmp_name'], 'uploads/'.$_FILES('filupload')['name']);
     }
-    // if connection fail or not
+  
 	if(!$con)
 	{
 		die("Error : ".mysqli_connect_error());
@@ -26,29 +32,27 @@
 	if($pass1 == $pass2)
 	{
         // insert data from register.html into databases
-		$sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`)
-                VALUES
-                ('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender');";
-		if(mysqli_query($con, $sql))
+		$sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`) VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender');";
+		if(mysqli_query($con,$sql))
 		{
-		echo "<script>
-            	alert('Successful');
-            	window.location.href='login.html';
-            	</script>";
+			echo "<script>
+            alert('Successful');
+            window.location.href='login.html';
+            </script>";
 		}
 		else
 		{
-		echo "<script>
-            	alert('ERROR');
-            	window.location.href='index.html';
-           	 </script>";
+			echo "<script>
+            alert('ERROR');
+            window.location.href='register.html';
+            </script>";
 		}
 	}else
 	{
-        // if comfirmpassword hasn't the same message with password.
-		echo "<script>
-    		alert('Wrong password');
-    		window.location.href='index.html';
+        // if  comfirm password has not the same password with password
+        echo "<script>
+    alert('Wrong password');
+    window.location.href='register.html';
     </script>";
 	}
 	// close connection
