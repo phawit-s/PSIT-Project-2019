@@ -12,12 +12,12 @@
     <div class="menubar">
         <ul>
         <?php if(isset($_SESSION['Name'])) { ?>
-          <li><a href="logout.php">logout</a></li>
-          <li><a href="#">WELCOME <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a></li>
+          <li><a href="logout.php">Logout</a></li>
+          <li><a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a></li>
           <li><a href="contact page.php">Contact Us</a></li>
         <?php }else { ?>
-                <li><a href="login.html">login</a></li>
-                <li><a href="register.html">register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
         <?php } ?>
         </ul>
     </div>
@@ -34,9 +34,9 @@
           <?php if(isset($_SESSION['Name'])) { ?>
           <b id="txt3">
             <p id="already">
-            test
+            fuck you
             <p id="already2">!!!Please !!!</p><br><br>
-            <p><a href="contact page.html" id="login_in_home">test</a></p>
+            <p><a href="contact page.html" id="login_in_home">Fuck you get out</a></p>
             </p>
             
           <?php }else { ?>
