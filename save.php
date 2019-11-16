@@ -32,7 +32,8 @@
 	if($pass1 == $pass2)
 	{
         // insert data from register.html into databases
-		$sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`) VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender');";
+		$sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`, `picture`)
+				 VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender', '$new);";
 		if(mysqli_query($con,$sql))
 		{
 			echo "<script>
