@@ -16,22 +16,16 @@
     $userwname = $_POST['userwname'];
 	$pass1 = $_POST['renterPass'];
 	$pass2 = $_POST['rconfirmPass'];
-
 	$temp = explode('.', $_FILES('filupload')['name']);
 	$new =  round(microtime(true)). '.'. end($temp);
-	if(move_uploaded_file($_FILES['filupload']['tmp_name'], 'uploads/'.$new));{
-		echo 'Succesful';
-		}
     }
-  
 	if(!$con)
 	{
 		die("Error : ".mysqli_connect_error());
-    }
-    // if password and comfirmpassword have the same word.
-	if($pass1 == $pass2)
-	{
-        // insert data from register.html into databases
+	}
+	if(move_uploaded_file($_FILES['filupload']['tmp_name'], 'uploads/'.$new));{
+		if($pass1 == $pass2)
+		{
 		$sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`, `picture`)
 				 VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender', '$new);";
 		if(mysqli_query($con,$sql))
@@ -55,6 +49,7 @@
     alert('Wrong password');
     window.location.href='register.html';
     </script>";
+	}
 	}
 	// close connection
 	mysqli_close($con);
