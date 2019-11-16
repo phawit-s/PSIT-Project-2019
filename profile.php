@@ -19,7 +19,7 @@
     </div>
     <?php if(isset($_SESSION['Name'])) { ?>
     <ul>
-        <li><?php echo $_SESSION['picture']; ?></li>
+    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($_SESSION['picture']).'"/>'; ?>
         <li><?php echo $_SESSION['userwname']; ?></li>
         <li><?php echo $_SESSION['Name']; ?></li>
         <li><?php echo $_SESSION['Surname']; ?></li>
