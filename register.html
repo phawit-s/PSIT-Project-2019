@@ -35,7 +35,7 @@
                     <td>Confirm Password</td><td><input type="password" class="input-field" name="rconfirmPass"></td>
                 </tr>
                 <tr>
-                    <td>Picture</td><td><input type="file" class="input-field" name="image"></td>
+                    <td>Picture</td><td><input type="file" class="input-field" name="image" onchange="readURL(this)"></td>
                 </tr>
                 <tr>
                     <td>Gender</td><td>Male<input type="radio" name="gender" value="Male">Female<input type="radio" name="gender" value="Female"></td>
@@ -47,7 +47,22 @@
                     <td colspan="2"><p class="to-login">Already have an account? <a href="#">Sign in</a></p></td>
                 </tr>
             </table>
+            <figure class="figure">
+                <img id="img" class="figure-img img-fluid rounded" alt="">
+                <figcaption class="figure-caption">A caption for the above image.</figcaption>
+            </figure>
         </div>
     </form>
+    <script>
+        function readURL(input){
+
+            var reader = new FileReader();
+            reader.onload = function(e){
+                console.log(e.target.result)
+                $('#img').attr('src', e.target.result)
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    </script>
 </body>
 </html>
