@@ -23,7 +23,9 @@
 
 	$temp = explode('.', $_FILES('filupload')['name']);
 	$new =  round(microtime(true)). '.'. end($temp);
-	move_uploaded_file($_FILES['filupload']['tmp_name'], 'uploads/'.$new);
+	if(move_uploaded_file($_FILES['filupload']['tmp_name'], 'uploads/'.$new));{
+		echo 'Succesful';
+		}
     }
   
 	if(!$con)
