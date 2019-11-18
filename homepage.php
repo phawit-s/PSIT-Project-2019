@@ -29,7 +29,8 @@
     <div>
         <div class="textbox2">
           <b id="txt2">
-            
+            <p id="txt2_h">Need a Tutor ???<br><b style="font-size: 20px; margin-bottom: 10px;">"you need to go to random page"</b></p>
+            <p id="txt_3"><a href="register.html" style="text-decoration: none; color: white">Go To Random Page</a></p>
           </b>
           <?php if(isset($_SESSION['Name'])) { ?>
           <b id="txt3">
@@ -42,10 +43,10 @@
           <?php }else { ?>
             <b id="txt3">
             <p id="already">
-            Already Have An Account ???
+            Already Have A Tutor ???
             </p>
-            <p id="already2">!!!Please Login !!!</p><br><br>
-            <p><a href="login.html" id="login_in_home">Go To Login Page Nowww</a></p>
+            <p id="already2">!!!Please click this !!!</p><br><br>
+            <p><a href="login.html" id="login_in_home">Go To Chat Page Nowww</a></p>
           </b>
           <?php } ?>
         </div>
