@@ -44,7 +44,7 @@
                     <td colspan="2"><input type="reset" class="button1" value="Clean">&nbsp <input type="submit" class="button2" name="save" value="Save"/></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><p class="to-login">Already have an account? <a href="#">Sign in</a></p></td>
+                    <td colspan="2"><p class="to-login">Already have an account? <a href="login.html">Sign in</a></p></td>
                 </tr>
             </table>
             <figure class="figure">
@@ -53,16 +53,5 @@
             </figure>
         </div>
     </form>
-    <script>
-        function readURL(input){
-
-            var reader = new FileReader();
-            reader.onload = function(e){
-                console.log(e.target.result)
-                $('#img').attr('src', e.target.result)
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-    </script>
 </body>
 </html>
