@@ -29,8 +29,6 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         
         $random[] = $row["Name"];
-        
-
         $data[$row["Name"]] =  array(
                 'Name' => $row['Name'],
                 'Surname' => $row['Surname'],
@@ -40,18 +38,9 @@ if ($result->num_rows > 0) {
     
     echo "0 results";
 }
-$number = 1;
-$random_keys= array_rand($random,$number);
-echo "<table>";
-    
-    for($i = 0; $i< $number; $i++){
-        $id = $random[$random_keys[$i]];
-        echo"<tr>";
-            echo "<td>".$data[$id]['Name']."</td>";
-            echo "<td>".$data[$id]['Surname']."</td>";
-        echo"</tr>";
-    }
-echo"</table>";
+var_dump($random);
+$pick = array_rand($random);
+echo $random[$pick];
 ?>
 </body>
 </html>
