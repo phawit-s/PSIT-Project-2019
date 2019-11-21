@@ -6,7 +6,8 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-$result_set = $connection->query("SELECT * FROM register");
+$sql="SELECT * FROM register ";
+$result=mysqli_query($con,$sql);
 
 ?>
 <!DOCTYPE html>
@@ -31,7 +32,7 @@ $result_set = $connection->query("SELECT * FROM register");
             </thead>
             <tbody>
                 <?php
-                    while($row = $result_set->fetch_array(MYSQLI_ASSOC)){
+                    while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
                 ?>
                 <tr>
                     <td><?php echo $row['userid']; ?></td>
@@ -39,13 +40,11 @@ $result_set = $connection->query("SELECT * FROM register");
                     <td><?php echo $row['Surname']; ?></td>
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['userwname']; ?></td>
-                    <td><button type="button" class="btn btn-success">Edit</td>    
-                
+                    <td><button type="button" class="btn btn-success">Edit</td>
+                    
                 </tr>
-    
-                
+                    <?php } ?>
             <?php
-                    }
                 mysqli_free_result($result);
 
                 mysqli_close($con);
