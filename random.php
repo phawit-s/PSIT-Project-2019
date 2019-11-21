@@ -31,7 +31,6 @@ if ($result->num_rows > 0) {
         $random[] = $row["Name"];
         $data[$row["Name"]] =  array(
                 'Name' => $row['Name'],
-                'Surname' => $row['Surname'],
         );    
     }
 } else {
