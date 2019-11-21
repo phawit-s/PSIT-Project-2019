@@ -1,7 +1,7 @@
 <?php
-    require_once("connect.php");
+    require_once("db_connect.php");
         $sql="SELECT * FROM register";
-        $data=$connect->query($sql)
+        $data=$db_connect->query($sql)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +35,7 @@
             <?php
                 }
                 $data->free_result();
-                $connect->close();
+                $db_connect->close();
             ?>
             </tbody>
 
