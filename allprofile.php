@@ -1,7 +1,14 @@
 <?php
-    require_once("db_connect.php");
-        $sql="SELECT * FROM register";
-        $data=$db_connect->query($sql)
+$con=mysqli_connect('localhost', 'id11387127_projectpsit2019', 'Imnayeon1995', 'id11387127_psit');
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+$sql="SELECT * FROM register";
+$result=mysqli_query($con,$sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,22 +27,25 @@
                     <th>Name</th>
                     <th>Surname</th>
                     <th>E-mail</th>
+                    <th>Username</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                    while($row=$data->fetch_array(MYSQLI_ASSOC)){
+                    $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
                 ?>
                 <tr>
                     <td><?php echo $row['userid']; ?></td>
                     <td><?php echo $row['Name']; ?></td>
                     <td><?php echo $row['Surname']; ?></td>
                     <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['userwname']; ?></td>
+                    <td><button type="button" class="btn btn-success">Edit</td>
                 </tr>
             <?php
-                }
-                $data->free_result();
-                $db_connect->close();
+                mysqli_free_result($result);
+
+                mysqli_close($con);
             ?>
             </tbody>
 
