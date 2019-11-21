@@ -1,13 +1,35 @@
-<?php
-require 'connect.php';
-$sql="select * from register";
-$result=mysqli_query($connect, $sql);
-if($result){
-    while($count=mysqli_fetch_array($result,MYSQLI_ASSOC)){
-        echo "Student id:".$count["userid"]."<br>";
-        echo "Name:".$count["Name"]."<br>";
-        echo "Surname:".$count["Surname"]."<br>";
-        echo "E-mail:".$count["email"]."<br>";
-    }
-} else{
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                
+                ?>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+    
+</body>
+</html>
