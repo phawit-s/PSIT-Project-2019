@@ -1,3 +1,8 @@
+<?php
+    require_once("connect.php");
+        $sql="SELECT * FROM register";
+        $data=$connect->query($sql)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +23,21 @@
             </thead>
             <tbody>
                 <?php
-                
+                    while($row=$data->fetch_array(MYSQLI_ASSOC)){
                 ?>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php echo $row['userid']; ?></td>
+                    <td><?php echo $row['Name']; ?></td>
+                    <td><?php echo $row['Surname']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
                 </tr>
+            <?php
+                }
+                $data->free_result();
+                $connect->close();
+            ?>
             </tbody>
+
             
         </table>
     </div>
