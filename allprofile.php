@@ -6,7 +6,7 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-$sql="SELECT * FROM register";
+$sql="SELECT * FROM register where 10";
 $result=mysqli_query($con,$sql);
 
 ?>
@@ -41,6 +41,7 @@ $result=mysqli_query($con,$sql);
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['userwname']; ?></td>
                     <td><button type="button" class="btn btn-success">Edit</td>
+                    
                 </tr>
             <?php
                 mysqli_free_result($result);
