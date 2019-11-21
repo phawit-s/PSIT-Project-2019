@@ -20,6 +20,7 @@ $result=mysqli_query($con,$sql);
 </head>
 <body>
     <div class="container">
+        <div class="col-md-3">
         <table class="table">
             <thead>
                 <tr>
@@ -50,9 +51,8 @@ $result=mysqli_query($con,$sql);
                 mysqli_close($con);
             ?>
             </tbody>
-
-            
         </table>
+    </div>
     </div>
     
 </body>
