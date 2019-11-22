@@ -37,7 +37,7 @@
                         </td>
                         <td>
                         <?php echo $_SESSION['userid']; ?>
-                        </d>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -53,6 +53,14 @@
                         </td>
                         <td>
                         <?php echo $_SESSION['gender']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <b>Subject: </b>
+                        </td>
+                        <td>
+                        <?php echo $_SESSION['subject']; ?>
                         </td>
                     </tr>
                 </table>
