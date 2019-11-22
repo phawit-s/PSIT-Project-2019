@@ -11,6 +11,7 @@
 
         if($result->num_rows >0){
             $row = $result->fetch_assoc();
+            $_SESSION['userid'] = $row['userid'];
             $_SESSION['Name'] = $row['Name'];
             $_SESSION['Surname'] = $row['Surname'];
             $_SESSION['email'] = $row['email'];
