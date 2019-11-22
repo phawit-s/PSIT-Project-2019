@@ -41,7 +41,7 @@ $result=mysqli_query($con,$sql);
                     <td><?php echo $row['Surname']; ?></td>
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['userwname']; ?></td>
-                    <td><button type="button" class="btn btn-success">Edit</td>
+                    <td><button type="button" class="btn btn-success"><a href="profile<?php echo $row['userid'];?>">  Edit</td>
                     
                 </tr>
                     <?php } ?>
