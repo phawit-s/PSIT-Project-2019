@@ -17,7 +17,8 @@
             $_SESSION['email'] = $row['email'];
             $_SESSION['userwname'] = $row['userwname'];
             $_SESSION['gender'] = $row['gender'];
-            $_SESSION['picture'] = $row['picture']
+            $_SESSION['picture'] = $row['picture'];
+            $_SESSION['subject'] = $row['subject'];
             header('location:index.php');
         }
         else{
