@@ -1,37 +1,78 @@
-<?php session_start();?>
+<?php session_start(); ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-        <ul>
-        <?php if(isset($_SESSION['Name'])) { ?>
-          <li><a href="logout.php">logout</a></li>
-          <li><a href="#">WELCOME <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a></li>
-          <li><a href="contact page.php">Contact Us</a></li>
-          <li><a href="index.php">Home</a></li>
-        <?php }else { ?>
-                <li><a href="login.html">login</a></li>
-                <li><a href="register.html">register</a></li>
-        <?php } ?>
-        </ul>
-    </div>
-    <?php if(isset($_SESSION['Name'])) { ?>
-    <ul>
-    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($_SESSION['picture']).'" height="400" width="400"/>'; ?>
-        <li><?php echo $_SESSION['userwname']; ?></li>
-        <li><?php echo $_SESSION['Name']; ?></li>
-        <li><?php echo $_SESSION['Surname']; ?></li>
-        <li><?php echo $_SESSION['email']; ?></li>
-        <li><?php echo $_SESSION['gender']; ?></li>  
-
-
-    <?php }else { ?>
-    <?php } ?>
-    </ul>
+<body background="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80">
+    <center>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header text-white" style="background-color: lightgreen;">
+            <h4 class="card-title" style="color: white;">Your Profile</h4>
+        </div>
         
+          <div class="card-body">
+              <?php if(isset($_SESSION['Name'])) { ?>
+            <table><br>
+                    <tr>
+                        <td>
+                          <b>Name: </b>
+                        </td>
+                        <td>
+                        <?php echo $_SESSION['Name']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <b>Student ID: </b>
+                        </td>
+                        <td>
+                        <?php echo $_SESSION['userid']; ?>
+                        </d>
+                    </tr>
+                    <tr>
+                        <td>
+                          <b>Email: </b>
+                        </td>
+                        <td>
+                        <?php echo $_SESSION['email']; ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <b>Gender: </b>
+                        </td>
+                        <td>
+                        <?php echo $_SESSION['gender']; ?>
+                        </td>
+                    </tr>
+                </table>
+          </div>
+        </div>
     </div>
-    <?php mysqli_close($con); ?>
+    
+        <div class="col">
+          <div class="card">
+            <div class="card-header text-white" style="background-color: lightgreen;" >
+              <h1>Picture</h1>
+              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($_SESSION['picture']).'"style="width:50%; border-radius: 100%">'; ?>
+            </div>
+          <div class="card-body">
+          <a href="#" class="btn btn-primary">Edit your profile</a>
+      </div>
+    </div>
+  </div>
+  <?php }else { ?>
+    <?php } ?>
+  </div>
+  <?php mysqli_close($con); ?>
+
 </body>
+
 </html>
