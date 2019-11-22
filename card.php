@@ -21,7 +21,7 @@ $result=mysqli_query($con,$sql);
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col">
+				<div class="col-m">
 					<div class="card">
                     <?php
                     while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
