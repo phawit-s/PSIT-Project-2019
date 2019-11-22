@@ -2,7 +2,7 @@
     // Database Connection code
             $host = 'localhost';
         $username = 'id11387127_projectpsit2019';
-        $password = '********';
+        $password = 'Imnayeon1995';
     $databasename = 'id11387127_psit';
              $con = mysqli_connect($host,$username,$password,$databasename);
     if(isset($_POST['save'])) {
@@ -15,7 +15,8 @@
        $gender = $_POST['gender'];
     $userwname = $_POST['userwname'];
 	$pass1 = $_POST['renterPass'];
-	$pass2 = $_POST['rconfirmPass'];
+    $pass2 = $_POST['rconfirmPass'];
+    $subject = $_POST['subject']
 	$image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
     	}
 	if(!$con){
@@ -24,7 +25,7 @@
     	// if password and comfirmpassword have the same word.
 	if($pass1 == $pass2){
         // insert data from register.html into databases
-	     $sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`, `picture`) VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender', '$image');";
+	     $sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`, `picture`, `subject`) VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender', '$image', '$subject');";
 		if(mysqli_query($con,$sql)){
 		     echo "<script>
                      alert('Successful');
