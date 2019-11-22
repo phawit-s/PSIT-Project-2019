@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="register page">
     <link rel="stylesheet" href="CSS/style_for_register.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <form action="save.php" method="POST" enctype="multipart/form-data">
@@ -36,6 +37,11 @@
                 <tr>
                     <td>Picture</td><td><input type="file" class="input-field" name="image" onchange="readURL(this)"></td>
                 </tr>
+                
+                <tr>
+                    <td>Subject</td><td>ICS<input type="radio" name="subject" value="subject">ITF<input type="radio" name="subject" value="subject">PSIT<input type="radio" name="subject" value="subject"></td>
+                </tr>
+                
                 <tr>
                     <td>Gender</td><td>Male<input type="radio" name="gender" value="Male">Female<input type="radio" name="gender" value="Female"></td>
                 </tr>
