@@ -13,6 +13,20 @@
 <body background="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80">
     <center>
   <div class="container">
+  <div class="row">
+            <div class="col-md">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <?php if(isset($_SESSION['Name'])) { ?>
+                <a href="logout.php">Logout</a>
+                <a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
+                <a href="contact page.php">Contact Us</a>
+                <a href="index.php">Home</a>
+            <?php }else { ?>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            <?php } ?>
+            </div>
+        </div>
     <div class="row">
       <div class="col">
         <div class="card">
