@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 $con=mysqli_connect('localhost', 'id11387127_projectpsit2019', 'Imnayeon1995', 'id11387127_psit');
 // Check connection
@@ -20,8 +21,20 @@ $result=mysqli_query($con,$sql);
 </head>
 <body>
     <div class="container">
-        <div class="col-md-3">
-        <table class="table">
+        <div class="menubar">
+            <ul>
+            <?php if(isset($_SESSION['Name'])) { ?>
+                <li><a href="logout.php">Logout</a></li>
+                <li><a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a></li>
+                <li><a href="contact page.php">Contact Us</a></li>
+            <?php }else { ?>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            <?php } ?>
+            </ul>
+        </div>
+        <div class="col-md">
+            <table class="table">
             <thead>
                 <tr>
                     <th>Student id</th>
@@ -41,7 +54,7 @@ $result=mysqli_query($con,$sql);
                     <td><?php echo $row['Surname']; ?></td>
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['userwname']; ?></td>
-                    <td><button type="button" class="btn btn-success"><a href="profile<?php echo $row['userid'];?>">  Edit</td>
+                    <td><a href="profile<?php echo $row['userid'];?>.php" class="btn btn-success" button type="button">View</td>
                     
                 </tr>
                     <?php } ?>
