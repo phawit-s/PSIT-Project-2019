@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80");
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.summitmedia-digital.com/esquiremagph/images/2019/03/13/WeWork_MAIN_Mar2019.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,6 +19,15 @@ body h1{
     margin-bottom: 10px;
     font-size: 40px;
     text-shadow: black;
+}
+
+.line{
+    border: 2px solid rgb(177, 128, 54);
+    border-radius: 5px;
+}
+
+table h4{
+    color: rgb(212, 210, 200);
 }
 
 .text{
@@ -57,7 +66,7 @@ body h1{
     border-radius: 20px;
     position: relative;
     margin: auto;
-    background-image: url("https://ejudge.it.kmitl.ac.th/uploads/1511415077_gangnam-style-lift-scene-o.gif");
+    background: linear-gradient(to right, rgb(126, 109, 109), rgb(112, 81, 41));
     background-size: cover;
     background-position: center;
     padding: 20px;
