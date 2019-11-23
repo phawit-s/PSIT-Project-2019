@@ -15,6 +15,7 @@
           <li><a href="logout.php">Logout</a></li>
           <li><a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a></li>
           <li><a href="contact page.php">Contact Us</a></li>
+          <li><a href="allprofile.php">Member</a></li>
           
         <?php }else { ?>
                 <li><a href="login.html">Login</a></li>
