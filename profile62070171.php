@@ -31,6 +31,7 @@ $result=mysqli_query($con,$sql);
                 <a href="logout.php">Logout</a>
                 <a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
                 <a href="contact page.php">Contact Us</a>
+                <a href="index.php">Home</a>
             <?php }else { ?>
                 <a href="login.html">Login</a>
                 <a href="register.html">Register</a>
