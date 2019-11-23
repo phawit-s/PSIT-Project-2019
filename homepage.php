@@ -3,27 +3,44 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="CSS/style_for_homepage.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style_for_contact.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="top">
       "WELCOME TO TU ME PLEASE!"
       <br><br><p style="font-size: medium; font-weight: bold;">Please scroll down for more information</p>
     </div>
-    <div class="menubar">
-        <ul>
-        <?php if(isset($_SESSION['Name'])) { ?>
-          <li><a href="logout.php">Logout</a></li>
-          <li><a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a></li>
-          <li><a href="contact page.php">Contact Us</a></li>
-          <li><a href="allprofile.php">Member</a></li>
-          <li><a href="index.php">Home</a></li>
-          
-        <?php }else { ?>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-        <?php } ?>
-        </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+  <a class="navbar-brand" href="#">TU ME PLEASE!!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact us<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More in website
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+          <a class="dropdown-item" href="#">Rule for use this site</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Login</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
     <div class="textbox1">
         <p>"WHAT IS TU ME PLEASE ?"</p>
         <p>example text</p>
