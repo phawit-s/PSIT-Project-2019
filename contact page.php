@@ -7,8 +7,10 @@
 </head>
 <body>
     <?php if(isset($_SESSION['Name'])) { ?>
-    		<a href="#">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
-    		<a href="logout.php">logout</a>
+		<a href="logout.php">Logout</a>
+                <a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
+                <a href="contact page.php">Contact Us</a>
+                <a href="index.php">Home</a>
     <?php }else { ?>
                 <a href="login.html">login</a>
                 <a href="register.html">register</a>
