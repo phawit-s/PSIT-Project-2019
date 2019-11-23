@@ -22,15 +22,17 @@ $result=mysqli_query($con,$sql);
 <body>
     <div class="container">
         <div class="row">
+            <div class="col-md">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <?php if(isset($_SESSION['Name'])) { ?>
-                <a href="logout.php">Logout</a><br>
-                <a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a><br>
-                <a href="contact page.php">Contact Us</a><br>
+                <a href="logout.php">Logout</a>
+                <a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
+                <a href="contact page.php">Contact Us</a>
             <?php }else { ?>
-                <a href="login.html">Login</a><br>
-                <a href="register.html">Register</a><br>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
             <?php } ?>
+            </div>
         </div>
         <div class="row">
             <div class="col-md">
