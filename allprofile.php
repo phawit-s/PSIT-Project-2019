@@ -21,51 +21,51 @@ $result=mysqli_query($con,$sql);
 </head>
 <body>
     <div class="container">
-        <div class="menubar">
-            <ul>
+        <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <?php if(isset($_SESSION['Name'])) { ?>
-                <li><a href="logout.php">Logout</a></li>
-                <li><a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a></li>
-                <li><a href="contact page.php">Contact Us</a></li>
+                <a href="logout.php">Logout</a><br>
+                <a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a><br>
+                <a href="contact page.php">Contact Us</a><br>
             <?php }else { ?>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <a href="login.html">Login</a><br>
+                <a href="register.html">Register</a><br>
             <?php } ?>
-            </ul>
         </div>
-        <div class="col-md">
-            <table class="table">
-            <thead>
-                <tr>
-                    <th>Student id</th>
-                    <th>Name</th>
-                    <th>Surname</th>
-                    <th>E-mail</th>
-                    <th>Username</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+        <div class="row">
+            <div class="col-md">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Student id</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>E-mail</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
                     while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
-                ?>
-                <tr>
-                    <td><?php echo $row['userid']; ?></td>
-                    <td><?php echo $row['Name']; ?></td>
-                    <td><?php echo $row['Surname']; ?></td>
-                    <td><?php echo $row['email']; ?></td>
-                    <td><?php echo $row['userwname']; ?></td>
-                    <td><a href="profile<?php echo $row['userid'];?>.php" class="btn btn-success" button type="button">View</td>
+                    ?>
+                    <tr>
+                        <td><?php echo $row['userid']; ?></td>
+                        <td><?php echo $row['Name']; ?></td>
+                        <td><?php echo $row['Surname']; ?></td>
+                        <td><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['userwname']; ?></td>
+                        <td><a href="profile<?php echo $row['userid'];?>.php" class="btn btn-success" button type="button">View</td>
                     
-                </tr>
-                    <?php } ?>
-            <?php
-                mysqli_free_result($result);
-
-                mysqli_close($con);
-            ?>
-            </tbody>
-        </table>
-    </div>
+                    </tr>
+                        <?php } ?>
+                    <?php
+                        mysqli_free_result($result);
+                        mysqli_close($con);
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     
 </body>
