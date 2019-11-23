@@ -4,41 +4,26 @@
     <meta charset="UTF-8">
     <meta name="description" content="login page">
     <link rel="stylesheet" href="CSS/style_for_login.css">
-<style>
-A:hover {
-    color: brown;
-    text-decoration: overline underline;
-    font-weight: bold
-}
-A{
-    text-decoration: none;
-}
-</style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-    <body style="font-size: 20px">
-    <div align="center">
-</div>
-
-    <div class="form-box">
-      <h1 style="color: tomato;">Login Test</h1>
-        <form action="login.php" method="POST">
-            <div align="center">
-        <center>
-        &nbsp
-        <table>
-            <tr>
-                <td width="83"><font style="color: black; ">username</font></td>
-                <td width="150"><input type="text" name="username" id="username" size="21" class="input-field"></td>
-            </tr>
-            <tr>
-                <td width="83"><font style="color: black;">password</font></td>
-                <td><input type="password" name="password" id="password" class="input-field"></td>
-            </tr>
-        </table>
-        <center><input type="submit" name="submit" class="button" value="กดสิๆ"></center>
-            </div>
-        </form>
+<body>
+    <div class="container">
+        <div class="col-md-6 form-box">
+            <h1>Login</h1>
+                <form action="login.php" method="POST">
+                    <table>
+                        <tr>
+                            <td class="text">Username</td>
+                            <td><input type="text" name="username" id="username" size="21" class="input-field"></td>
+                        </tr>
+                        <tr>
+                            <td class="text">Password</td>
+                            <td><input type="password" name="password" id="password" class="input-field"></td>
+                        </tr>
+                    </table>
+                <input type="submit" name="submit" class="button" value="กดสิๆ">
+            </form>
+        </div>
     </div>
-
-    </body>
+</body>
 </html>

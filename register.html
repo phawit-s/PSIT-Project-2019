@@ -8,54 +8,51 @@
 </head>
 <body>
     <form action="save.php" method="POST" enctype="multipart/form-data">
-        <div class="hero">
-            <table class="form-box">
-                <tr>
-                    <th colspan="2">Sign Up Now</th>
-                </tr>
-                <tr>
-                    <td>Student ID</td><td><input type="userid" class="input-field" name="userid"></td>
-                </tr>
-                <tr>
-                    <td>Name</td><td><input type="Name" class="input-field" name="Name"></td>
-                </tr>
-                <tr>
-                    <td>Surname</td><td><input type="Surname" class="input-field" name="Surname"></td>
-                </tr>
-                <tr>
-                    <td>Email</td><td><input type="email" class="input-field" name="email"></td>
-                </tr>
-                <tr>
-                    <td>Username</td><td><input type="userwname" class="input-field" name="userwname"></td>
-                </tr>
-                <tr>
-                    <td>Enter Password</td><td><input type="password" class="input-field" name="renterPass"></td>
-                </tr>
-                <tr>
-                    <td>Confirm Password</td><td><input type="password" class="input-field" name="rconfirmPass"></td>
-                </tr>
-                <tr>
-                    <td>Picture</td><td><input type="file" class="input-field" name="image" onchange="readURL(this)"></td>
-                </tr>
-                
-                <tr>
-                    <td>Subject</td><td>ICS<input type="radio" name="subject" value="subject">ITF<input type="radio" name="subject" value="subject">PSIT<input type="radio" name="subject" value="subject"></td>
-                </tr>
-                
-                <tr>
-                    <td>Gender</td><td>Male<input type="radio" name="gender" value="Male">Female<input type="radio" name="gender" value="Female"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="reset" class="button1" value="Clean">&nbsp <input type="submit" class="button2" name="save" value="Save"/></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><p class="to-login">Already have an account? <a href="login.html">Sign in</a></p></td>
-                </tr>
-            </table>
-            <figure class="figure">
-                <img id="img" class="figure-img img-fluid rounded" alt="">
-                <figcaption class="figure-caption">A caption for the above image.</figcaption>
-            </figure>
+        <div class="container">
+            <div class="col-md-5 form-box">
+                <table>
+                        <tr>
+                        <th colspan="2">Sign Up Now <hr></th>
+                        </tr>
+                        <tr>
+                            <td>Student ID</td><td><input type="userid" class="input-field" name="userid"></td>
+                        </tr>
+                        <tr>
+                            <td>Name</td><td><input type="Name" class="input-field" name="Name"></td>
+                        </tr>
+                        <tr>
+                            <td>Surname</td><td><input type="Surname" class="input-field" name="Surname"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td><td><input type="email" class="input-field" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td>Username</td><td><input type="userwname" class="input-field" name="userwname"></td>
+                        </tr>
+                        <tr>
+                            <td>Enter Password</td><td><input type="password" class="input-field" name="renterPass"></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm Password</td><td><input type="password" class="input-field" name="rconfirmPass"></td>
+                        </tr>
+                        <tr>
+                            <td>Picture</td><td><input type="file" class="custom-input" name="image" onchange="readURL(this)"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Subject</td><td>ICS <input type="radio" class="choose" name="subject" value="subject">ITF <input type="radio" class="choose" name="subject" value="subject">PSIT <input type="radio" class="choose" name="subject" value="subject"></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td><td>Male <input type="radio" class="choose" name="gender" value="Male">Female <input type="radio" class="choose" name="gender" value="Female"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="reset" class="button1" value="Clean">&nbsp <input type="submit" class="button2" name="save" value="Save"/></td>
+                        </tr>
+                        <tr>
+                        <td colspan="2"><p class="to-login">Already have an account? <a href="login.html">Sign in</a></p></td>
+                        </tr>
+                </table>
+            </div>
         </div>
     </form>
 </body>
