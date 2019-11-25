@@ -2,7 +2,7 @@
     // Database Connection code
             $host = 'localhost';
         $username = 'id11387127_projectpsit2019';
-        $password = '**********';
+        $password = 'Imnayeon1995';
     $databasename = 'id11387127_psit';
              $con = mysqli_connect($host,$username,$password,$databasename);
     if(isset($_POST['save'])) {
@@ -16,7 +16,7 @@
     $userwname = $_POST['userwname'];
 	$pass1 = $_POST['renterPass'];
     $pass2 = $_POST['rconfirmPass'];
-    $subject = $_POST['subject']
+    $subject = $_POST['subject'];
 	$image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
     	}
 	if(!$con){
