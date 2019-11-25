@@ -7,7 +7,7 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-$sql="SELECT * FROM register where userid=62070171 ";
+$sql="SELECT * FROM register where userid=620700171 ";
 $result=mysqli_query($con,$sql);
 ?>
 <!DOCTYPE html>
@@ -108,6 +108,66 @@ $result=mysqli_query($con,$sql);
   </div>
   <?php } ?>
  
+  <div class="row justify-content-md-center">
+            <h2>Chatroom</h2>         
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th>massage</th>
+                    </tr>
+                  </thead>
+                <tbody id="dataRow">
+                </tbody>
+            </table>
+        </div>
+    <div class="row justify-content-md-center">
+        <div class="col-md">
+                <div class="form-group">
+                            
+                            <textarea rows="5" cols="50" id="idComment" placeholder="Enter Comment"></textarea><br>
+                            <button type="submit" id="commentBtn" class="btn btn-success green"><i class="fa fa-share"></i>comment</button>
+                </div>
+            </div>
+    </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+
+    <script>
+  // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBurLZPu6yeyjsX0ONt2_ap1Fh5amP7hIc",
+        authDomain: "itflab-58f77.firebaseapp.com",
+        databaseURL: "https://itflab-58f77.firebaseio.com",
+        projectId: "itflab-58f77",
+        storageBucket: "itflab-58f77.appspot.com",
+        messagingSenderId: "838482665115",
+        appId: "1:838482665115:web:ad87fad67205f95cc3b03e"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script> 
+    <script>let myFirebase = firebase.database();
+        let dataRef = myFirebase.ref('/chat171');
+        document.getElementById("commentBtn").onclick = function() {
+        let lcomment = document.getElementById('idComment').value;
+        let ltime = Date.now();
+        dataRef.push({
+        comment: lcomment,
+        time: ltime
+        });
+        };
+    </script>
+    <script>
+        dataRef.limitToLast(4).on('child_added', function(childSnapshot) {
+let item = childSnapshot.val()
+document.getElementById('dataRow').innerHTML +=  "</td><td>" + item.comment
+});
+</script>
   </div>
   <?php mysqli_close($con); ?>
 
