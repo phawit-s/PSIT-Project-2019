@@ -106,11 +106,12 @@ $result=mysqli_query($con,$sql);
       </div>
     </div>
   </div>
+  </div>
   <?php } ?>
- 
+ <div class="container">
   <div class="row justify-content-md-center">
             <h2>Chatroom</h2>         
-                <table class="table">
+                <table class="table table-striped table-dark">
                   <thead>
                     <tr>
                         <th>massage</th>
