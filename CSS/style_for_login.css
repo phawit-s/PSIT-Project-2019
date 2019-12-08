@@ -28,17 +28,15 @@ body h1{
 
 table h4{
     color: rgb(212, 210, 200);
-}
-
-.text{
-    padding: 0px 0px 0px 40px;
+    text-align: left;
+    padding: 0px 5px 0px 5px;
 }
 
 .input-field{
     border-radius: 20px;
     border: 1px solid lightcoral;
     padding: 5px;
-    margin: 5px 0px 5px 60px;
+    margin: 5px 0px 5px 0px;
     width: 100%;
     outline: none;
 }
@@ -46,7 +44,7 @@ table h4{
 .button{
     border-radius: 20px;
     border: none;
-    width: 50%;
+    width: 40%;
     padding: 5px;
     color: black;
     font-weight: 700;
