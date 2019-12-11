@@ -17,6 +17,7 @@
 	$pass1 = $_POST['renterPass'];
     $pass2 = $_POST['rconfirmPass'];
     $subject = $_POST['subject'];
+    $lineid = $_POST['lineid'];
 	$image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
     	}
 	if(!$con){
@@ -25,7 +26,7 @@
     	// if password and comfirmpassword have the same word.
 	if($pass1 == $pass2){
         // insert data from register.html into databases
-	     $sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`, `picture`, `subject`) VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender', '$image', '$subject');";
+	     $sql = "INSERT INTO `register`(`userid`, `Name`, `Surname`, `email`, `userwname`, `pass`, `gender`, `picture`, `subject`,`lineid`) VALUES('$userid', '$Name', '$Surname', '$email', '$userwname', '$pass1', '$gender', '$image', '$subject', '$lineid');";
 		if(mysqli_query($con,$sql)){
 		     echo "<script>
                      alert('Successful');
