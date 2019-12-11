@@ -5,7 +5,7 @@ body{
 	background-attachment: fixed;
 	margin: 0;
 }
-
+/********************************************Menu Bar Section**************************************************/
 div.menubar{
 	background-color: black;
 	overflow: hidden;
@@ -38,7 +38,8 @@ li{
 	color: red;
 	background-color: white;
 }
-
+/********************************************What is Tu Me Pls box Section**************************************************/
+/**box of content**/
 .top{
 	margin: 0;
 	box-sizing: content-box;
@@ -56,7 +57,7 @@ li{
 	padding-top: 15%; 
 	
 }
-
+/**box of content and text decoration**/
 div.textbox1{
 	background-color: white;
 	box-sizing: content-box;
@@ -73,6 +74,7 @@ div.textbox1{
   	font-family:Comic Sans MS;
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
  }
+ /********************************************Login Section**************************************************/
 div.textbox2{
 	margin-top: 70px;
 	box-sizing: content-box;
@@ -83,7 +85,7 @@ div.textbox2{
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 
 }
-
+/**background**/
 div.textbox2{
 	background-size: cover;
 	box-sizing: content-box;
@@ -96,7 +98,7 @@ div.textbox2{
   	background-repeat:no-repeat;
   	background-position: center;
 }
-
+/**text decoration and  login button decoration**/
 #txt2{
 	margin-top: 100px;
 	box-sizing: content-box;
@@ -146,60 +148,15 @@ div.textbox2{
 	position: absolute;
 	padding-top: 10px;
 	border-radius: 15px;
-	font-size: 30px;
+	font-size: 25px;
 	color: white;
 	font-weight: bolder;
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	padding-right: 10px;
+	text-align: center;
 }
 
 #txt_3:hover{
 	color: red;
 	border-color: white;
-}
-
-
-
-
-#txt3{
-	margin-top: 100px;
-	box-sizing: content-box;
-	width: 700px;
-	height: 500px;
-	margin-left: 50px;
-}
-
-#already{
-	font-size: 50px;
-	color: white;
-	font-weight: bold;
-	text-align: center;
-}
-
-#already2{
-	font-size: 40px;
-	color: white;
-	font-weight: bold;
-	text-align:center;
-}
-
-#login_in_home{
-	text-align:center;
-	font-size: 40px;
-	font-weight: bolder;
-	text-decoration: none;
-	color: white;
-	border-radius: 15px;
-	border:white solid 3px;
-	padding: 5%;
-	background-color: black;
-	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-	text-align: center;
-	margin-left: 10%; 
-}
-
-#login_in_home:hover{
-	color: red;
-	background-color: white;
-
 }

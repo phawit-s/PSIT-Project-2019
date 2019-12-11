@@ -112,7 +112,7 @@ body{
 .social-icons li a:hover .fa{
 	transform: rotateX(360deg);
 }
-
+/*==card detail section==*/
 .card-details{
 	position: absolute;
 	width: 100%;
@@ -129,7 +129,7 @@ body{
 	font-weight: 400;
 	color: red;
 }
-
+/*==card decoration section==*/
 .card:hover .image-box img{
 	opacity: 0.2;
 }
