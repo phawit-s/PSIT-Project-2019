@@ -63,6 +63,7 @@ $result=mysqli_query($con,$sql);
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive-md">
+                  <!-- table information -->
                     <table class="table table-striped table-hover">
                         <thead>
                         <tr>
