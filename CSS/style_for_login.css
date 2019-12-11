@@ -10,7 +10,6 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    padding-top: 13%;
 }
 
 body h1{
@@ -35,6 +34,11 @@ body a{
 body a:hover{
     /*make it hover same color when click*/
     color: rgb(231, 147, 38);
+}
+
+.container{
+    /*make container at center of the page*/
+    margin-top: 10%;
 }
 
 .form-box{
@@ -93,5 +97,4 @@ table h4{
     transition-duration: 0.4s;
     box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.24), 0px 8px 12px 0px rgba(0,0,0,0.24);
 }
-
 
