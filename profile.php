@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<!Profile html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
