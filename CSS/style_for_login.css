@@ -1,66 +1,44 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*change all font*/
+    font-family: 'Open Sans', sans-serif;
 }
 
 body{
+    /*make background no repeat and make it a bit darker by using linear-gradient*/
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.summitmedia-digital.com/esquiremagph/images/2019/03/13/WeWork_MAIN_Mar2019.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    padding-top: 15%;
+    padding-top: 13%;
 }
 
 body h1{
+    /*add shadow color and make it huge*/
     color: sandybrown;
     text-shadow: 2px 2px 4px #000000;
     margin-bottom: 10px;
-    font-size: 40px;
+    font-size: 50px;
     text-shadow: black;
 }
 
-.line{
-    border: 2px solid rgb(177, 128, 54);
-    border-radius: 5px;
-}
-
-table h4{
+body h6{
+    /*add color to Login text*/
     color: rgb(212, 210, 200);
-    text-align: left;
-    padding: 0px 5px 0px 5px;
 }
 
-.input-field{
-    border-radius: 20px;
-    border: 1px solid lightcoral;
-    padding: 5px;
-    margin: 5px 0px 5px 0px;
-    width: 100%;
-    outline: none;
+body a{
+    /*add color to link*/
+    color: rgb(231, 147, 38);
 }
 
-.button{
-    border-radius: 20px;
-    border: none;
-    width: 40%;
-    padding: 5px;
-    color: black;
-    font-weight: 700;
-    background: linear-gradient(to right, rgb(231, 147, 38), rgb(223, 195, 73));
-    font-size: 20px;
-    outline: none;
-    cursor: pointer;
-    margin: 20px 0px 0px 0px;
-}
-
-.button:hover{
-    color: black;
-    background: linear-gradient(to left, rgb(206, 133, 38), rgb(223, 195, 73));
+body a:hover{
+    /*make it hover same color when click*/
+    color: rgb(231, 147, 38);
 }
 
 .form-box{
+    /*adjust content box to center*/
     border-radius: 20px;
     position: relative;
     margin: auto;
@@ -71,3 +49,49 @@ table h4{
     text-align: center;
     opacity: 1;
 }
+
+.line{
+    /*make a bit more bigger and add color*/
+    border: 2px solid rgb(177, 128, 54);
+    border-radius: 5px;
+}
+
+table h4{
+    /*add color and adjust position for Username and password*/
+    color: rgb(212, 210, 200);
+    text-align: left;
+    padding: 0px 5px 0px 5px;
+}
+
+.input-field{
+    /*adjust input field and make it oval shape*/
+    border-radius: 20px;
+    border: 1px solid lightcoral;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    width: 100%;
+    outline: none;
+}
+
+.button{
+    /*make button point when click, add size, position using linear-gradient for color*/
+    border-radius: 20px;
+    border: none;
+    width: 40%;
+    padding: 5px;
+    color: black;
+    font-weight: 700;
+    background: linear-gradient(to right, rgb(231, 147, 38), rgb(223, 195, 73));
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    margin: 20px 0px 15px 0px;
+}
+
+.button:hover{
+    /*make it has shadow when point to it*/
+    transition-duration: 0.4s;
+    box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.24), 0px 8px 12px 0px rgba(0,0,0,0.24);
+}
+
+
