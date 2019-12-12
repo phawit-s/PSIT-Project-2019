@@ -6,8 +6,41 @@
     <link rel="stylesheet" href="CSS/style_for_register.css">
     <!--Calling Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--This is nav bar link to contact home random login-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top"><!--logo and position-->
+        <a class="navbar-brand" href="index.php">TU ME PLEASE!!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="contact page V.2.html">Contact us<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown"><!--drop down-->
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More in website
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                <a class="dropdown-item" href="profile.php">My Profile</a>
+                <a class="dropdown-item" href="finalrandom.php">Random page</a>
+                <a class="dropdown-item" href="login.html">Login</a>
+            </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
     <!--Link with save.php file-->
     <form action="save.php" method="POST" enctype="multipart/form-data">
         <!--Create Contain box with table by using bootstrap-->
@@ -19,6 +52,9 @@
                         </tr>
                         <tr>
                             <td>Student ID</td><td><input type="userid" class="input-field" name="userid"></td>
+                        </tr>
+                        <tr>
+                            <td>Enter Line ID</td><td><input type="LineID" class="input-field" name="idline"></td>
                         </tr>
                         <tr>
                             <td>Name</td><td><input type="Name" class="input-field" name="Name"></td>
@@ -33,9 +69,6 @@
                             <td>Username</td><td><input type="userwname" class="input-field" name="userwname"></td>
                         </tr>
                         <tr>
-                            <td>Enter Your Line ID</td><td><input type="LineID" class="input-field" name="idline"></td>
-                        </tr>
-                        <tr>
                             <td>Enter Password</td><td><input type="password" class="input-field" name="renterPass"></td>
                         </tr>
                         <tr>
@@ -44,7 +77,6 @@
                         <tr>
                             <td>Picture</td><td><input type="file" class="custom-input" name="image" onchange="readURL(this)"></td>
                         </tr>
-                        
                         <tr>
                             <td>Subject</td><td>ICS <input type="radio" class="choose" name="subject" value="ICS">ITF <input type="radio" class="choose" name="subject" value="ITF">PSIT <input type="radio" class="choose" name="subject" value="PSIT"></td>
                         </tr>
