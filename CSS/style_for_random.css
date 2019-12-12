@@ -1,0 +1,38 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/********************************************Result section**************************************************/
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.squarespace-cdn.com/content/v1/5ceffd441f23ce0001815558/1560469123904-MBFN16DF12KS8Z446UP2/ke17ZwdGBToddI8pDm48kKtijf5x5S0rIV7X_qDH3dB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UaZbTVdO5VSPAOxIcVIbmIFLIFeVDbQiz7iBIgNCzklBDD2o6CESiqIlH5ssNFrtmA/image-asset.jpeg?format=750w");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.result{
+    margin: 40px 0px 40px 0px;
+    padding: 8px;
+    background-color: #c0c0c0;
+}
+
+.header{
+    text-align: center;
+    color: dimgrey;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.line{
+    border: #3c4247 1.5px solid;
+}
+
+.button2{
+    border-radius: 15px;
+    border: black;
+    color: black;
+    background: gray;
+    cursor: pointer;
+    outline: none;
+}
