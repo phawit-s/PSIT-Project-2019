@@ -101,9 +101,7 @@ $result=mysqli_query($con,$sql);
               <h1>Picture</h1>
               <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['picture']).'"style="width:50%; border-radius: 100%">'; ?>
             </div>
-          <div class="card-body">
-          <a href="#" class="btn btn-primary">Edit your profile</a>
-      </div>
+   <!--Deleted Edit your profile button-->
     </div>
   </div>
   </div>
