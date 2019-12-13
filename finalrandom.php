@@ -73,6 +73,7 @@
             echo "<td>" . $row['Name'] . "</td>";
             echo "<td>" . $row['userwname'] . "</td>";
             echo "</tr>"; ?>
+          <form action="testsave.php" method="POST" enctype="multipart/form-data">
           <table><br>
             <hr class="line">
             <tr>
@@ -80,7 +81,15 @@
                   <b>Name: </b>
                   </td>
               <td>
-                <?php echo $row['Name']; ?>
+                <input type="text" name="Name" value="<?php echo $row['Name'];?>">
+                  </td>
+                  </tr>
+                  <tr>
+                <td>
+                  <b>Surname: </b>
+                  </td>
+              <td>
+                <input type="text" name="Surname" value="<?php echo $row['Surname'];?>">
                   </td>
                   </tr>
                     <tr>
@@ -88,7 +97,7 @@
                   <b>Student ID: </b>
                   </td>
               <td>
-                <?php echo $row['userid']; ?>
+                <input type="text" name="userid" value="<?php echo $row['userid'];?>">
                   </td>
                   </tr>
                 <tr>
@@ -114,9 +123,10 @@
                   <td>
                     <?php echo $row['subject']; ?>
                   </td>
-                   <td><a href="profile<?php echo $row['userid'];?>.php" class="btn btn-secondary" button type="button">View</td>
+                   <td><input type="submit" class="btn btn-secondary" button type="button" name="save">View</td>
                  </tr>
          </table>
+         </form>
        <?php   }
         } 
       }
