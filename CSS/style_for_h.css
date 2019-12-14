@@ -4,12 +4,16 @@
 
 /********************************************Profile section use to style profile*************************************************/
 .background {
-  background-color: #51595a;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://lh3.googleusercontent.com/TqQHALQAdiCwlF7btDlUwwsVrSrtoGgJiybsW3OMJWFZc-_02E-NdTzesZMuGP-E3cB3y-wU=w1080-h608-p-no-v0");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .container {
   border-radius: 20px;
-  margin: 20px 0px 0px 0px;
+  margin: 20px 0px 20px 0px;
   padding: 15px;
   background-color: #c0c0c0;
 }
