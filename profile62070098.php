@@ -52,7 +52,7 @@ $result=mysqli_query($con,$sql);
             </div>
         </div>
     </div>
-  <?php } ?>
+
 <br>
 </div>
            <div class="col-md">
@@ -61,9 +61,7 @@ $result=mysqli_query($con,$sql);
         </div>
 
           <div class="card-body" style="width:37%; background-color: white; opacity:0.7; border-radius: 1%">
-               <?php
-                    while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
-                ?>
+
             <table><br>
                     <tr>
                         <td>
@@ -108,6 +106,7 @@ $result=mysqli_query($con,$sql);
                 </table>
           </div>
         </div>
+        <?php } ?>
     </div>
     <br>
             <h2 style="color: white;">Chatroom</h2>
