@@ -38,20 +38,20 @@ $result=mysqli_query($con,$sql);
             </div>
         </div>
   </div><!--End of topper banner--><br><br>
-  <!--Starting Profiles-->
   <div class="container">
     <div class="row">
-      <!--Picture-->
       <div class="col-md">
           <div class="card" style="width:50%;">
+          <?php
+                while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                ?>
             <div class="card-header text-white" style="background-color: #F67171;" >
               <h1>Picture</h1>
               <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['picture']).'"style="width:50%; border-radius: 100%">'; ?>
             </div>
-   <!--Deleted Edit your profile button-->
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
   <?php } ?>
 <br>
 </div>
