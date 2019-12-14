@@ -6,7 +6,6 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-
 $sql="SELECT * FROM register where userid=62070098 ";
 $result=mysqli_query($con,$sql);
 ?>
@@ -28,24 +27,40 @@ $result=mysqli_query($con,$sql);
             <div class="col-md">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <?php if(isset($_SESSION['Name'])) { ?>
-                <a href="logout.php">Logout</a>
-                <a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
-                <a href="contact page.php">Contact Us</a>
-                <a href="index.php">Home</a>
+                <a href="logout.php">Logout</a>&nbsp
+                <a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>&nbsp
+                <a href="contact page.php">ContactUs</a>&nbsp
+                <a href="index.php">Home</a>&nbsp
             <?php }else { ?>
-                <a href="login.html">Login</a>
+                <a href="login.html">Login</a>&nbsp
                 <a href="register.html">Register</a>
             <?php } ?>
             </div>
         </div>
+  </div><!--End of topper banner--><br><br>
+  <!--Starting Profiles-->
+  <div class="container">
     <div class="row">
+      <!--Picture-->
       <div class="col-md">
-        <div class="card">
-          <div class="card-header text-white" style="background-color: lightgreen;">
-            <h4 class="card-title" style="color: white;">Your Profile</h4>
+          <div class="card" style="width:50%;">
+            <div class="card-header text-white" style="background-color: #F67171;" >
+              <h1>Picture</h1>
+              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['picture']).'"style="width:50%; border-radius: 100%">'; ?>
+            </div>
+   <!--Deleted Edit your profile button-->
+    </div>
+  </div>
+  </div>
+  <?php } ?>
+<br>
+</div>
+           <div class="col-md">
+          <div class="card-header text-white" style="background-color: #F67171; width:37%;">
+            <h4 style="color: white;">Your Profile</h4>
         </div>
-        
-          <div class="card-body">
+
+          <div class="card-body" style="width:37%; background-color: white; opacity:0.7; border-radius: 1%">
                <?php
                     while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
                 ?>
@@ -94,22 +109,9 @@ $result=mysqli_query($con,$sql);
           </div>
         </div>
     </div>
-    
-        <div class="col">
-          <div class="card">
-            <div class="card-header text-white" style="background-color: lightgreen;" >
-              <h1>Picture</h1>
-              <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['picture']).'"style="width:50%; border-radius: 100%">'; ?>
-            </div>
-   <!--Deleted Edit your profile button-->
-    </div>
-  </div>
-  </div>
-  <?php } ?>
- <div class="container">
-  <div class="row justify-content-md-center">
-            <h2>Chatroom</h2>         
-                <table class="table table-striped table-dark">
+    <br>
+            <h2 style="color: white;">Chatroom</h2>
+                <table class="table table-striped table-dark" style="width:50%;">
                   <thead>
                     <tr>
                         <th>massage</th>
@@ -122,7 +124,7 @@ $result=mysqli_query($con,$sql);
     <div class="row justify-content-md-center">
         <div class="col-md">
                 <div class="form-group">
-                            
+
                             <textarea rows="5" cols="50" id="idComment" placeholder="Enter Comment"></textarea><br>
                             <button type="submit" id="commentBtn" class="btn btn-success green"><i class="fa fa-share"></i>comment</button>
                 </div>
@@ -149,7 +151,7 @@ $result=mysqli_query($con,$sql);
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    </script> 
+    </script>
     <script>let myFirebase = firebase.database();
         let dataRef = myFirebase.ref('/chat98');
         document.getElementById("commentBtn").onclick = function() {
