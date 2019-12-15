@@ -2,7 +2,7 @@
     // Database Connection code
             $host = 'localhost';
         $username = 'id11387127_projectpsit2019';
-        $password = 'Imnayeon1995';
+        $password = '*********';
     $databasename = 'id11387127_psit';
              $con = mysqli_connect($host,$username,$password,$databasename);
     if(isset($_POST['save'])) {

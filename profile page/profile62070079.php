@@ -23,21 +23,60 @@ $result=mysqli_query($con,$sql);
 </head>
 <body background="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1490&q=80">
     <center>
-  <div class="container">
-  <div class="row">
-            <div class="col-md">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <?php if(isset($_SESSION['Name'])) { ?>
-                <a href="logout.php">Logout</a>
-                <a href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
-                <a href="contact page.php">Contact Us</a>
-                <a href="index.php">Home</a>
-            <?php }else { ?>
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
-            <?php } ?>
-            </div>
+      	<!--NavBar Section-->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top"><!--logo and position-->
+  <a class="navbar-brand" href="index.php">TU ME PLEASE!!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<!-------------------------------------if you are already login---------------------------------------------------------------------------->
+  <?php if(isset($_SESSION['Name'])) { ?>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact page V.2.html">Contact us<span class="sr-only">(current)</span></a>
+      </li>
+    <li class="nav-item active">
+         <a class="nav-link" href="News.html">Updates History<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown"><!--drop down-->
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More in website
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+          <a class="dropdown-item" href="profile.php">My Profile</a>
+          <a class="dropdown-item" href="random.php">Random page</a>
+          <a class="dropdown-item" href="logout.php">Logout</a>
         </div>
+      </li>
+    </ul>
+  </div>
+  <!-------------------------------------if you aren't already login yet---------------------------------------------------------------------------->
+  <?php }else { ?>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact page V.2.html">Contact us<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
+      </li>
+            <li class="nav-item active">
+        <a class="nav-link" href="register.html">Register<span class="sr-only">(current)</span></a>
+      </li>
+      </li>
+    </ul>
+  </div>
+          <?php } ?>
+</nav>
+  <div class="container">
+
     <div class="row">
       <div class="col-md">
         <div class="card">

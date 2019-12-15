@@ -1,12 +1,12 @@
 <?php session_start(); ?>
 <?php
-$con=mysqli_connect('localhost', 'id11387127_projectpsit2019', 'Imnayeon1995', 'id11387127_psit');
+$con=mysqli_connect('localhost', 'id11387127_projectpsit2019', '**********', 'id11387127_psit');
 // Check connection
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-
+//select datas from database
 $sql="SELECT * FROM register ";
 $result=mysqli_query($con,$sql);
 
@@ -75,6 +75,7 @@ $result=mysqli_query($con,$sql);
                         </tr>
                         </thead>
                         <tbody>
+                        <!--loop to get all data-->
                         <?php
                         while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
                         ?>

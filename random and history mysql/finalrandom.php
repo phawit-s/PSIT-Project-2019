@@ -15,38 +15,58 @@
   <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 </head>
 <body>
-      <!--Navigation bar section link to other pages-->
-      <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-        <a class="navbar-brand" href="index.php">TU ME PLEASE!!</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <?php if(isset($_SESSION['Name'])) { ?>
-              <li class="nav-item active">
-                <a class="nav-link" href="index.php">Home</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="contact page.php">Contact Us</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="logout.php">Logout</a>
-              </li>
-            <?php }else { ?>
-              <li class="nav-item active">
-                <a class="nav-link" href="login.html">Login</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="register.html">Register</a>
-              </li>
-            <?php } ?>
-          </ul>
+	<!--NavBar Section-->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top"><!--logo and position-->
+  <a class="navbar-brand" href="index.php">TU ME PLEASE!!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<!-------------------------------------if you are already login---------------------------------------------------------------------------->
+  <?php if(isset($_SESSION['Name'])) { ?>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact page V.2.html">Contact us<span class="sr-only">(current)</span></a>
+      </li>
+    <li class="nav-item active">
+         <a class="nav-link" href="News.html">Updates History<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown"><!--drop down-->
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More in website
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+          <a class="dropdown-item" href="profile.php">My Profile</a>
+          <a class="dropdown-item" href="random.php">Random page</a>
+          <a class="dropdown-item" href="logout.php">Logout</a>
         </div>
-      </nav>
+      </li>
+    </ul>
+  </div>
+  <!-------------------------------------if you aren't already login yet---------------------------------------------------------------------------->
+  <?php }else { ?>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact page V.2.html">Contact us<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
+      </li>
+            <li class="nav-item active">
+        <a class="nav-link" href="register.html">Register<span class="sr-only">(current)</span></a>
+      </li>
+      </li>
+    </ul>
+  </div>
+          <?php } ?>
+</nav>
       <!--Result from random-->
       <form action="" method="POST" enctype="multipart/form-data">
         <div class="container result">
@@ -60,19 +80,22 @@
                   <th>Username</th><th>Name</th>
                 </tr>
       </form>
+    <!------------connect with database if press the button--------------->
    <?php
     if(isset($_POST['save'])) {
     $hostname="localhost";
     $username="id11387127_projectpsit2019"; 
-    $password="Imnayeon1995";
+    $password="***********";
     $db = "id11387127_psit";
     $dbh = new PDO("mysql:host=$hostname;dbname=$db", $username, $password);
+    // random with php 
     foreach($dbh->query('SELECT * FROM register ORDER BY RAND() limit 1') as $row) {
       if($row != $_SESSION['userwname']){
             echo "<tr>";
             echo "<td>" . $row['Name'] . "</td>";
             echo "<td>" . $row['userwname'] . "</td>";
             echo "</tr>"; ?>
+            <!------------------show data and sent to databse to show history how many people you had random----------------------->
           <form action="testsave.php" method="POST" enctype="multipart/form-data">
           <table><br>
             <hr class="line">

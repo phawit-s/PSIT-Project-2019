@@ -13,38 +13,58 @@
   <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 </head>
 <body class="background">
-  <!--Navigation bar section-->
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-    <a class="navbar-brand" href="index.php">TU ME PLEASE!!</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+	<!--NavBar Section-->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top"><!--logo and position-->
+  <a class="navbar-brand" href="index.php">TU ME PLEASE!!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<!-------------------------------------if you are already login---------------------------------------------------------------------------->
+  <?php if(isset($_SESSION['Name'])) { ?>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact page V.2.html">Contact us<span class="sr-only">(current)</span></a>
+      </li>
+    <li class="nav-item active">
+         <a class="nav-link" href="News.html">Updates History<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown"><!--drop down-->
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More in website
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+          <a class="dropdown-item" href="profile.php">My Profile</a>
+          <a class="dropdown-item" href="random.php">Random page</a>
+          <a class="dropdown-item" href="logout.php">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-------------------------------------if you aren't already login yet---------------------------------------------------------------------------->
+  <?php }else { ?>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="index.php">Home</a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link" href="contact page.php">Contact Us</a>
-        </li>
-        <?php if(isset($_SESSION['Name'])) { ?>
-          <li class="nav-item active">
-            <a class="nav-link" href="profile.php">Welcome <?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="logout.php">Logout</a>
-          </li>
-        <?php }else { ?>
-          <li class="nav-item active">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="register.html">Register</a>
-          </li>
-        <?php } ?>
-      </ul>
-    </div>
-  </nav>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact page V.2.html">Contact us<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
+      </li>
+            <li class="nav-item active">
+        <a class="nav-link" href="register.html">Register<span class="sr-only">(current)</span></a>
+      </li>
+      </li>
+    </ul>
+  </div>
+          <?php } ?>
+</nav>
   <!--Profile display section-->
   <div class="container">
     <div class="row">
@@ -61,7 +81,7 @@
         <table>
           <tr>
             <td><h4>Name:</h4>
-            <p>Thanaphat Suyapong</p>
+            <p><?php echo $_SESSION['Name']; ?> <?php echo $_SESSION['Surname']; ?></p>
             </td>
           </tr>
           <tr>
