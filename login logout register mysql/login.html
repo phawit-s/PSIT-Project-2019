@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="login page">
+    <link rel="stylesheet" href="CSS/style_for_login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--This is nav bar link to contact home random login-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top"><!--logo and position-->
+        <a class="navbar-brand" href="index.php">TU ME PLEASE!!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="contact page V.2.html">Contact us<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown"><!--drop down-->
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More in website
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="random.php">Random page</a>
+                <a class="dropdown-item" href="login.html">Login</a>
+            </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <!--A box contain website login interface such as username and password-->
+    <div class="container">
+        <div class="col-md-5 form-box">
+            <h1>Login</h1>
+            <hr class="line">
+                <form action="login.php" method="POST">
+                    <center>
+                    <table>
+                        <tr>
+                            <td class="text"><h4>Username</h4></td>
+                            <td><input type="text" name="username" id="username" size="21" class="input-field"></td>
+                        </tr>
+                        <tr>
+                            <td class="text"><h4>Password</h4></td>
+                            <td><input type="password" name="password" id="password" class="input-field"></td>
+                        </tr>
+                    </table>
+                    </center>
+                <input type="submit" name="submit" class="button" value="Comfirm">
+                <h6>Need an account? <a href="register.html">Regiter here.</a></h6>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
