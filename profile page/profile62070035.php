@@ -6,7 +6,7 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-$sql="SELECT * FROM register where userid=62070171";
+$sql="SELECT * FROM register where userid=62070035";
 $result=mysqli_query($con,$sql);
 ?>
 <!DOCTYPE html>
@@ -192,7 +192,7 @@ $result=mysqli_query($con,$sql);
     firebase.initializeApp(firebaseConfig);
     </script>
     <script>let myFirebase = firebase.database();
-        let dataRef = myFirebase.ref('/chat171');
+        let dataRef = myFirebase.ref('/chat35');
         document.getElementById("commentBtn").onclick = function() {
         let lcomment = document.getElementById('idComment').value;
         let ltime = Date.now();
