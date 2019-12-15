@@ -3,10 +3,10 @@
     // Database Connection code
             $host = 'localhost';
         $username = 'id11387127_projectpsit2019';
-        $password = '********************';
+        $password = '**********';
     $databasename = 'id11387127_psit';
              $con = mysqli_connect($host,$username,$password,$databasename);
-    // if press the view button from the history.php page
+    // if press the view button from the finalrandom.php page
     if(isset($_POST['save'])) { 
        $userid = $_SESSION['userid'];
          $Name = $_POST['Name'];
@@ -18,10 +18,7 @@
     }
         $sql = "INSERT INTO `history`(`userid`, `Nameran`, `Surname`, `userran`) VALUES('$userid', '$Name', '$Surname', '$userid2');";
         if(mysqli_query($con,$sql)){
-		     echo "<script>
-                     alert('Successful');
-                     window.location.href='allprofile.php';
-                     </script>";
+            header("Location: profile$userid2.php");
 		}
 		else{
 		      echo "<script>

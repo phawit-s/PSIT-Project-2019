@@ -85,7 +85,7 @@
     if(isset($_POST['save'])) {
     $hostname="localhost";
     $username="id11387127_projectpsit2019"; 
-    $password="***********";
+    $password="**********";
     $db = "id11387127_psit";
     $dbh = new PDO("mysql:host=$hostname;dbname=$db", $username, $password);
     // random with php 
@@ -104,7 +104,7 @@
                   <b>Name: </b>
                   </td>
               <td>
-                <input type="text" name="Name" value="<?php echo $row['Name'];?>">
+                <input type="text" name="Name" readonly value="<?php echo $row['Name'];?>">
                   </td>
                   </tr>
                   <tr>
@@ -112,7 +112,7 @@
                   <b>Surname: </b>
                   </td>
               <td>
-                <input type="text" name="Surname" value="<?php echo $row['Surname'];?>">
+                <input type="text" name="Surname" readonly value="<?php echo $row['Surname'];?>">
                   </td>
                   </tr>
                     <tr>
@@ -120,7 +120,7 @@
                   <b>Student ID: </b>
                   </td>
               <td>
-                <input type="text" name="userid" value="<?php echo $row['userid'];?>">
+                <input type="text" name="userid" readonly value="<?php echo $row['userid'];?>">
                   </td>
                   </tr>
                 <tr>
@@ -128,7 +128,7 @@
                     <b>Email: </b>
                   </td>
                   <td>
-                  <?php echo $row['email']; ?>
+                  <input type="" name="" readonly value=" <?php echo $row['email']; ?>">
                   </td>
                 </tr>
                 <tr>
@@ -136,7 +136,7 @@
                     <b>Gender: </b>
                   </td>
                   <td>
-                    <?php echo $row['gender']; ?>
+                    <input type="" name="" readonly value="<?php echo $row['gender']; ?>">
                   </td>
                 </tr>
                 <tr>
@@ -144,9 +144,9 @@
                     <b>Subject: </b>
                   </td>
                   <td>
-                    <?php echo $row['subject']; ?>
+                    <input type="" name="" readonly value="<?php echo $row['subject']; ?>">
                   </td>
-                   <td><input type="submit" class="btn btn-secondary" button type="button" name="save">View</td>
+                   <td><input type="submit" class="btn btn-secondary" button type="button" value ="view" name="save"></td>
                  </tr>
          </table>
          </form>
@@ -154,6 +154,5 @@
         } 
       }
         ?>
-      <hr class="line">
 </body>
 </html>
